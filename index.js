@@ -120,17 +120,17 @@ const start = function() {
       choices: ["John Doe", "Ashley Rodriguez", "Malia Brown", "Sarah Lourd", "Christian Eckenrode"]
     }
   ]).then(function(answer){
-    connection.query("INSERT INTO employee (first_name, last_name, role_id)
-        VALUES ('', '', '' );" 
-        function(err, res){
-        if (err) throw err;
+    connection.query("INSERT INTO employee SET ?", {
+       addEmployee:answer.addEmployee
+      }),function(err, res){
       console.log("Your Employee was created successfully!");
       start();
       }
-    }
-  })
-  
+    })
   };
+
+  
+  
 
   function addDept(){
     console.log("Add Department");
