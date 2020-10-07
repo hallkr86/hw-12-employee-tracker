@@ -3,7 +3,7 @@ USE employer_managerdb;
 /* Insert 3 Rows into your new table */
 /*dept table*/
 INSERT INTO department (department_name)
-VALUES ("Engineering", "Finance", "Legal", "Sales");
+VALUES ("Engineering"), ("Finance"), ("Legal"), ("Sales");
 
 
 /*role table*/
